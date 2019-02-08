@@ -77,7 +77,7 @@ function playField() {
 function draw (cardNum) {
     let group = document.getElementById('group');
     let card  = document.createElement('img');
-    card.setAttribute('src', `set_img/${cardNum}.png`);
+    card.setAttribute('src', `static/set_img/${cardNum}.png`);
     card.setAttribute('id', `${cardNum}`)
     card.setAttribute('height', '200');
     card.setAttribute('width', '142');
@@ -174,7 +174,7 @@ function replaceCards () {
     document.querySelectorAll('.selected-card').forEach(function(card) {
         $(`#${card.id}`).off();
         let newCards = newCard().join('')
-        card.setAttribute('src', `set_img/${newCards}.png`);
+        card.setAttribute('src', `static/set_img/${newCards}.png`);
         card.setAttribute('id', `${newCards}`)
         $( `#${newCards}` ).click(function() {
             $(`#${newCards}`).addClass('selected-card')
