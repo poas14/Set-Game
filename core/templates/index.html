@@ -12,30 +12,22 @@
     <script src="static/js/javascript.js" defer></script>
 </head>
 <body>
-    <div class='navbar navbar-expand-md navbar-dark bg-primary'>
-        <div class='col'>
-        <h1 id='title'>Set!</h1>
-        </div>
-        
+  <div class="d-flex" id="wrapper">
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Set Game</div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">How to Play</a>
+        <a id='resetbutton' class="list-group-item list-group-item-action bg-light">New Game</a>
+        <a id='hint-button' class="list-group-item list-group-item-action bg-light">Give me a Hint!</a>
+        <a id='solution-button' class="list-group-item list-group-item-action bg-light">Show Solutions</a>
+      </div>
     </div>
-    <div class="container-fluid">
-    <div class="row">
-        <div id='group' class='container col-lg-6'>
-        </div>
-        <div id='set-controls'>
-        <div class='col'>
-        <button class='btn btn-light' id='resetbutton' type="button">Reset</button>
-        </div>
-        <div class='col'>
-        <button class='btn btn-light' id='hint-button' type="button">Want a hint?</button>
-        </div>
-        <div id='solutions' class='col'>
-            <button class='btn btn-light' id='solution-button' type='button'>Show Solutions</button>
-        </div>
-            <div id='solution-list' class='col-lg-6'>
-            </div>
+
+    <div id="page-content-wrapper" class='container'>
+        <div id='group' class='container'>
         </div>
     </div>
-    </div>
+  </div>
+
 </body>
 </html>
