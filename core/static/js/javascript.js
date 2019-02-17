@@ -344,3 +344,10 @@ $( "#hint-button" ).click(function() {
     $(`#${randCard}`).addClass('hint-card')
     makeAnimation('.hint-card', 'tada')
   });
+
+
+  $(document).ready(function(){
+    $('#btn').click(function(){
+      $('#server_msg_modal').modal('show');
+     });
+  });
