@@ -280,13 +280,13 @@ function delDuplicate (array) {
 function displaySolutions (solutions) {
     let counter = 0
     if (solutions.length === 0) {
-        let noSolution = `<p class='solve-it'>There are no sets!!!></p>`
-        $('#solutions').append(noSolution);
+        let noSolution = `<p class='solve-it list-group-item list-group-item-action bg-light'>There are no sets!!!</p>`
+        $('.list-group').append(noSolution);
         return
     }
     for (let solution of solutions) {
-        let button = `<button class='solve-it btn-outline-secondary' data-index='${counter}' id='solution${counter}'>Solution ${counter + 1}</button>`
-        $('#solution-list').append(button);
+        let button = `<a class='solve-it list-group-item list-group-item-action bg-light' data-index='${counter}' id='solution${counter}'>Solution ${counter + 1}</a>`
+        $('.list-group').append(button);
         counter += 1;
     }
     counter = 0;
@@ -334,10 +334,6 @@ function currentBoard() {
         theseCards.push(thisCard)
     })
     return theseCards
-}
-
-function giveMeHints () {
-    
 }
 
 $( "#hint-button" ).click(function() {
